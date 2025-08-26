@@ -1,5 +1,10 @@
 # 🚀 Abhiram S R's Portfolio
 
+[![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
+[![TailwindCSS](https://img.shields.io/badge/TailwindCSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![Shadcn UI](https://img.shields.io/badge/Shadcn_UI-111827?style=for-the-badge&logo=radix-ui&logoColor=white)](https://ui.shadcn.com/)
+[![Vercel](https://img.shields.io/badge/Deployed_on-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
+
 A modern, fully responsive personal portfolio built with **Next.js 14**, **Tailwind CSS v4**, **shadcn/ui**, and deployed on **Vercel**.  
 This project showcases my skills, projects, and background while integrating **MLOps-ready components** and **Open Graph (OG) image generation** for SEO & social sharing.
 
