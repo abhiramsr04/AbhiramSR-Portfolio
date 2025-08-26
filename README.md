@@ -27,7 +27,7 @@ src/
 ├── components/ # Reusable UI components (Navbar, Hero, Footer, etc.)
 ├── lib/ # Utility functions
 public/ # Static assets (images, icons, profile picture)
-
+```
 
 ## ⚙️ Tech Stack
 
