@@ -28,7 +28,6 @@ src/
 ├── lib/ # Utility functions
 public/ # Static assets (images, icons, profile picture)
 
----
 
 ## ⚙️ Tech Stack
 
