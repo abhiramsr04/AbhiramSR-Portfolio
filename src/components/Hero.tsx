@@ -32,7 +32,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white drop-shadow-lg"
       >
-        Hi, I'm <span className="text-cyan-400">Abhiram S R</span>
+        Hi, I&apos;m <span className="text-cyan-400">Abhiram S R</span>
       </motion.h1>
 
       {/* Typing Effect Subtitle */}
@@ -67,8 +67,9 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="mt-3 text-gray-400 text-base sm:text-lg max-w-xl"
       >
-        I design intelligent systems blending <span className="text-cyan-400">engineering precision </span> 
-         with <span className="text-purple-400"> AI innovation</span>.
+        I design intelligent systems blending{" "}
+        <span className="text-cyan-400">engineering precision </span> 
+        with <span className="text-purple-400"> AI innovation</span>.
       </motion.p>
 
       {/* Call to Action */}
