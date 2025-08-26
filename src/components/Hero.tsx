@@ -44,7 +44,7 @@ export default function Hero() {
       >
         <TypeAnimation
           sequence={[
-            "Civil Engineer turned Data Science Enthusiast 🔬",
+            "Data Science Enthusiast 🔬",
             2000,
             "Machine Learning Explorer 🚀",
             2000,
