@@ -68,7 +68,7 @@ export default function About() {
             className="text-lg leading-relaxed"
           >
             I enjoy building end-to-end solutions, exploring modern tools like{" "}
-            <span className="text-white">AWS, Docker, MLflow</span>, and
+            <span className="text-white">MongoDB, Docker, MLflow</span>, and
             working on impactful projects that bridge{" "}
             <span className="text-cyan-400">Machine Learning engineering and data science</span>.
           </motion.p>
