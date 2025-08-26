@@ -18,6 +18,7 @@ This project showcases my skills, projects, and background while integrating **M
 ---
 
 ## 🗂️ Project Structure
+```text
 src/
 ├── app/ # App Router (Next.js 14)
 │ ├── api/og/ # Dynamic OG image generation route
