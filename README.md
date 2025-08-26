@@ -41,7 +41,7 @@ public/ # Static assets (images, icons, profile picture)
 
 ## Go Live
 
-![Live Preview](https://abhiram-s-r-portfolio-delta.vercel.app/)
+![Live Preview](https://abhiram-s-r-portfolio-delta.vercel.app/api/og)
 
 💡 Author
 
