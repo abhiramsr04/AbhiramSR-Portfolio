@@ -1,36 +1,48 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🚀 Abhiram S R's Portfolio
 
-## Getting Started
+A modern, fully responsive personal portfolio built with **Next.js 14**, **Tailwind CSS v4**, **shadcn/ui**, and deployed on **Vercel**.  
+This project showcases my skills, projects, and background while integrating **MLOps-ready components** and **Open Graph (OG) image generation** for SEO & social sharing.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## ✨ Features
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- ⚡ **Next.js 14 (App Router)** – Server Components, API routes, and optimized rendering  
+- 🎨 **Tailwind CSS v4** – Utility-first styling with dark gradient theme  
+- 🧩 **shadcn/ui** – Beautiful, accessible UI components (Card, Button, Navbar, etc.)  
+- 📸 **Dynamic OG Image Generation** – Auto-updating preview images for social media using Vercel’s `@vercel/og`  
+- 📱 **Responsive Design** – Optimized for desktop, tablet, and mobile  
+- 🧑‍💻 **Modular Structure** – Easy to scale and maintain (`src/app`, `src/components`, `src/lib`)  
+- ☁️ **Deployed on Vercel** – Fast, global, serverless deployment  
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 🗂️ Project Structure
+src/
+├── app/ # App Router (Next.js 14)
+│ ├── api/og/ # Dynamic OG image generation route
+│ ├── page.tsx # Main entry point
+│ └── ...
+├── components/ # Reusable UI components (Navbar, Hero, Footer, etc.)
+├── lib/ # Utility functions
+public/ # Static assets (images, icons, profile picture)
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## ⚙️ Tech Stack
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **Framework**: [Next.js 14](https://nextjs.org/)  
+- **Styling**: [Tailwind CSS v4](https://tailwindcss.com/)  
+- **UI Components**: [shadcn/ui](https://ui.shadcn.com/)  
+- **Deployment**: [Vercel](https://vercel.com/)  
+- **Image Generation**: [@vercel/og](https://vercel.com/docs/functions/og-image-generation)  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Go Live
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![Live Preview](https://abhiram-s-r-portfolio-delta.vercel.app/)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+💡 Author
+
+Built by Abhiram S R
