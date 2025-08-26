@@ -39,12 +39,12 @@ export default function Contact() {
         >
           {[
             {
-              href: "mailto:yourmail@example.com",
+              href: "mailto:abhiramsr173@gmail.com",
               label: "Email",
               icon: <Mail className="w-6 h-6" />,
             },
             {
-              href: "https://www.linkedin.com/in/your-profile",
+              href: "https://www.linkedin.com/in/abhiramsr2309/",
               label: "LinkedIn",
               icon: <Linkedin className="w-6 h-6" />,
             },
@@ -81,7 +81,7 @@ export default function Contact() {
           transition={{ delay: 0.6, duration: 0.6 }}
           className="mt-16 text-sm text-gray-500"
         >
-          © {new Date().getFullYear()} Rogue • Built with ❤️ using Next.js & Tailwind
+          © {new Date().getFullYear()} Abhiram S R • Built with ❤️ using Next.js & Tailwind
         </motion.p>
       </div>
 

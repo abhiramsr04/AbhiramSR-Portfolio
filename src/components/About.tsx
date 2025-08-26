@@ -29,7 +29,7 @@ export default function About() {
             >
               <Image
                 src="/profile.jpg" // 👉 Replace with your photo
-                alt="Rogue"
+                alt="Abhiram"
                 fill
                 className="object-cover"
               />
@@ -54,11 +54,11 @@ export default function About() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg leading-relaxed"
           >
-            Hi, I’m <span className="text-white font-semibold">Rogue</span> 🚀  
+            Hi, I’m <span className="text-white font-semibold">Abhiram S R </span> 🚀  
             A passionate{" "}
-            <span className="text-cyan-400">Machine Learning & Data Science Enthusiast</span>  
-            with a strong foundation in Civil Engineering and hands-on projects
-            in <span className="text-white">AI, GIS, and MLOps</span>.
+            <span className="text-cyan-400">Machine Learning & Data Science Enthusiast </span>  
+            with a strong foundation in Machine Learning and hands-on projects
+            in <span className="text-white">ML, MLOps and LLMOps</span>.
           </motion.p>
 
           <motion.p
@@ -68,9 +68,9 @@ export default function About() {
             className="text-lg leading-relaxed"
           >
             I enjoy building end-to-end solutions, exploring modern tools like{" "}
-            <span className="text-white">Next.js, Docker, MLflow</span>, and
+            <span className="text-white">AWS, Docker, MLflow</span>, and
             working on impactful projects that bridge{" "}
-            <span className="text-cyan-400">engineering and data science</span>.
+            <span className="text-cyan-400">Machine Learning engineering and data science</span>.
           </motion.p>
         </motion.div>
       </div>

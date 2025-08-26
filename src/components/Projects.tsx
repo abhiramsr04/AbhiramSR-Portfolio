@@ -18,16 +18,16 @@ const projects = [
     title: "End-to-End ML Pipeline with MLOps",
     description:
       "Complete ML workflow with experiment tracking using MLflow, deployment with Docker, and CI/CD integration.",
-    tech: ["Python", "MLflow", "Docker", "DagsHub"],
+    tech: ["Python", "MLflow", "Docker", "DagsHub", "GitHub Actions", ],
     github: "https://github.com/abhiramsr04/DataScienceProject",
     demo: "#",
   },
   {
-    title: "Smart Coir Geomat",
+    title: "Network Security",
     description:
-      "Civil engineering project integrating AI-based monitoring system for slope protection and erosion control.",
-    tech: ["IoT", "ML", "MATLAB"],
-    github: "#",
+      "End-to-end phishing website detection system with automated ML pipeline, data drift validation, Dockerized deployment, and CI/CD.",
+    tech: ["Python", "MLflow", "Docker", "DagsHub", "GitHub Actions", "MongoDB", "FastAPI"],
+    github: "https://github.com/abhiramsr04/networksecurity",
     demo: "#",
   },
 ];

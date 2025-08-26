@@ -32,7 +32,7 @@ export default function Hero() {
         transition={{ duration: 0.8 }}
         className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-white drop-shadow-lg"
       >
-        Hi, I'm <span className="text-cyan-400">Rogue</span>
+        Hi, I'm <span className="text-cyan-400">Abhiram S R</span>
       </motion.h1>
 
       {/* Typing Effect Subtitle */}
@@ -67,8 +67,8 @@ export default function Hero() {
         transition={{ delay: 1.2, duration: 0.8 }}
         className="mt-3 text-gray-400 text-base sm:text-lg max-w-xl"
       >
-        I design intelligent systems blending <span className="text-cyan-400">engineering precision</span> 
-        with <span className="text-purple-400">AI innovation</span>.
+        I design intelligent systems blending <span className="text-cyan-400">engineering precision </span> 
+         with <span className="text-purple-400"> AI innovation</span>.
       </motion.p>
 
       {/* Call to Action */}
@@ -80,12 +80,14 @@ export default function Hero() {
       >
         <Link
           href="#projects"
+          scroll={true}
           className="px-7 py-3 rounded-xl bg-gradient-to-r from-cyan-400 to-blue-500 text-black font-semibold shadow-lg hover:scale-105 hover:shadow-cyan-500/40 transition-transform"
         >
           View Projects 🚀
         </Link>
         <Link
           href="#contact"
+          scroll={true}
           className="px-7 py-3 rounded-xl border border-gray-600 text-gray-300 font-semibold hover:border-cyan-400 hover:text-cyan-400 transition"
         >
           Contact Me

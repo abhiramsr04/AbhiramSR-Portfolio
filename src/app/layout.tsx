@@ -7,19 +7,19 @@ const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 const playfair = Playfair_Display({ subsets: ["latin"], variable: "--font-playfair" });
 
 export const metadata: Metadata = {
-  title: "Rogue | Portfolio",
-  description: "Premium Portfolio of Rogue showcasing skills, projects, and expertise.",
+  title: "Abhiram S R | Portfolio",
+  description: "Premium Portfolio of Abhiram S R showcasing skills, projects, and expertise.",
   openGraph: {
-    title: "Rogue | Portfolio",
-    description: "Explore Rogue’s portfolio: ML, Data Science, Web Development & more.",
+    title: "Abhiram S R | Portfolio",
+    description: "Explore Abhiram S R’s portfolio: ML, Data Science, Web Development & more.",
     url: "https://your-portfolio-url.com",
-    siteName: "Rogue Portfolio",
+    siteName: "Abhiram S R Portfolio",
     images: [
       {
         url: "/preview.png", // replace with your OG image
         width: 1200,
         height: 630,
-        alt: "Rogue Portfolio Preview",
+        alt: "Abhiram S R Portfolio Preview",
       },
     ],
     locale: "en_US",
@@ -27,8 +27,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Rogue | Portfolio",
-    description: "Premium Portfolio of Rogue",
+    title: "Abhiram S R | Portfolio",
+    description: "Premium Portfolio of Abhiram S R",
     images: ["/preview.png"], // replace with your OG image
   },
 };

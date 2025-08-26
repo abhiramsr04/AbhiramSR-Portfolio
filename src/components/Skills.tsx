@@ -1,13 +1,23 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Database, Brain, Globe } from "lucide-react";
+import { Code2, Database, Brain, Globe, Boxes, GitBranch, Layers, Cog } from "lucide-react";
 
 const skills = [
+  // Existing
   { name: "Python / ML", level: 90, icon: Brain },
   { name: "Data Science / SQL", level: 85, icon: Database },
-  { name: "MLOps (Docker, MLflow)", level: 75, icon: Globe },
-  { name: "Frontend (React / Next.js)", level: 70, icon: Code2 },
+  { name: "MLOps (Docker, MLflow,DagsHub)", level: 75, icon: Globe },
+  { name: "HTML", level: 90, icon: Code2 },
+
+  // New: Libraries & Frameworks
+  { name: "Analytics(Pandas, Numpy, Seaborn, Matplotlib)", level: 85, icon: Layers },
+  { name: "Jupyter Notebook", level: 85, icon: Boxes },
+  { name: "Power-BI", level: 80, icon: Boxes },
+
+  // New: Version Control & Deployment
+  { name: "Git/GitHub", level: 85, icon: GitBranch },
+  { name: "CI/CD (Basic)", level: 85, icon: Cog },
 ];
 
 export default function Skills() {
@@ -31,7 +41,7 @@ export default function Skills() {
               key={i}
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, delay: i * 0.2 }}
+              transition={{ duration: 0.6, delay: i * 0.1 }}
               className="relative flex flex-col items-center space-y-4 group"
             >
               {/* Circular progress */}
