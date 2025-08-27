@@ -8,6 +8,7 @@ export default function Footer() {
     { href: "#about", label: "About" },
     { href: "#skills", label: "Skills" },
     { href: "#projects", label: "Projects" },
+    { href: "#education", label: "Education" }, // ✅ Added Education
     { href: "#contact", label: "Contact" },
   ];
 
@@ -24,7 +25,9 @@ export default function Footer() {
           transition={{ duration: 0.6 }}
           className="text-sm text-gray-500"
         >
-          © {new Date().getFullYear()} <span className="text-gray-300 font-semibold">Rogue</span>. All Rights Reserved.
+          © {new Date().getFullYear()}{" "}
+          <span className="text-gray-300 font-semibold">Rogue</span>. All Rights
+          Reserved.
         </motion.p>
 
         {/* Quick Nav */}

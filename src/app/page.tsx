@@ -7,6 +7,7 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import Education from "@/components/Education";
 
 export default function Home() {
   return (
@@ -24,7 +25,6 @@ export default function Home() {
         <About />
       </section>
 
-
       {/* 🔹 Projects */}
       <section id="projects" className="py-20">
         <Projects />
@@ -35,7 +35,10 @@ export default function Home() {
         <Skills />
       </section>
 
-      
+      {/* 🔹 Education */}
+      <section id="education" className="py-20">
+        <Education />
+      </section>
 
       {/* 🔹 Contact */}
       <section id="contact" className="py-20 bg-gray-900/40">
