@@ -7,11 +7,11 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const projects = [
   {
-    title: "Rainfall-Driven Landslide Prediction",
+    title: "Anime Recommender System",
     description:
-      "Machine learning model predicting landslides in the Western Ghats using rainfall, slope, and geology data with QGIS integration.",
-    tech: ["Python", "Scikit-learn", "QGIS", "Pandas"],
-    github: "https://github.com/abhiramsr04/landslide-prediction",
+      "Developed an Anime Recommender System that leverages collaborative filtering and content-based techniques to provide personalized anime suggestions based on user preference",
+    tech: ["Python", "Hugging Face", "GROQ", "Langchain", "Streamlit", "Pandas"],
+    github: "https://github.com/abhiramsr04/Anime-Recommender-System",
     demo: "#",
   },
   {
