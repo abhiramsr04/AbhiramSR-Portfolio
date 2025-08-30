@@ -1,28 +1,35 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Code2, Database, Brain, Globe, Boxes, GitBranch, Layers, Cog } from "lucide-react";
+import {
+  Code2,
+  Database,
+  Brain,
+  Globe,
+  Boxes,
+  GitBranch,
+  Layers,
+  Cog,
+} from "lucide-react";
 
 const skills = [
-  // Existing
-  { name: "Python / ML", level: 90, icon: Brain },
-  { name: "Data Science / SQL", level: 85, icon: Database },
-  { name: "MLOps (Docker, MLflow,DagsHub)", level: 75, icon: Globe },
-  { name: "HTML", level: 90, icon: Code2 },
-
-  // New: Libraries & Frameworks
-  { name: "Analytics(Pandas, Numpy, Seaborn, Matplotlib)", level: 85, icon: Layers },
-  { name: "Jupyter Notebook", level: 85, icon: Boxes },
-  { name: "Power-BI", level: 80, icon: Boxes },
-
-  // New: Version Control & Deployment
-  { name: "Git/GitHub", level: 85, icon: GitBranch },
-  { name: "CI/CD (Basic)", level: 85, icon: Cog },
+  { name: "Python / ML", level: 90, icon: Brain, desc: "Data modeling, ML algorithms, DL basics" },
+  { name: "Data Science / SQL", level: 85, icon: Database, desc: "Data wrangling, analytics, optimization" },
+  { name: "MLOps (Docker, MLflow, DagsHub)", level: 75, icon: Globe, desc: "Pipeline automation & model deployment" },
+  { name: "HTML", level: 90, icon: Code2, desc: "Frontend structure & semantic markup" },
+  { name: "Analytics (Pandas, Numpy, Seaborn, Matplotlib)", level: 85, icon: Layers, desc: "EDA, visualization, numerical analysis" },
+  { name: "Jupyter Notebook", level: 85, icon: Boxes, desc: "Experimentation & data storytelling" },
+  { name: "Power-BI", level: 80, icon: Boxes, desc: "Business intelligence dashboards" },
+  { name: "Git/GitHub", level: 85, icon: GitBranch, desc: "Version control & collaboration" },
+  { name: "CI/CD (Basic)", level: 85, icon: Cog, desc: "Automated workflows & deployment" },
 ];
 
 export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-300">
+    <section
+      id="skills"
+      className="py-24 px-6 bg-gradient-to-b from-gray-950 via-gray-900 to-gray-950 text-gray-300"
+    >
       <div className="max-w-6xl mx-auto">
         {/* Heading */}
         <motion.h2
@@ -42,10 +49,10 @@ export default function Skills() {
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="relative flex flex-col items-center space-y-4 group"
+              className="relative flex flex-col items-center p-6 rounded-2xl bg-gray-900/50 border border-gray-800 hover:border-cyan-500 transition-all duration-300 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/30 group"
             >
-              {/* Circular progress */}
-              <div className="relative w-28 h-28">
+              {/* Glowing Circular Ring */}
+              <div className="relative w-28 h-28 flex items-center justify-center">
                 <svg className="w-28 h-28 -rotate-90">
                   <circle
                     cx="56"
@@ -64,11 +71,14 @@ export default function Skills() {
                     strokeWidth="8"
                     strokeLinecap="round"
                     fill="transparent"
-                    initial={{ strokeDasharray: 0 }}
-                    whileInView={{
-                      strokeDasharray: `${(2 * Math.PI * 50 * skill.level) / 100}, 999`,
+                    strokeDasharray={`${2 * Math.PI * 50}`}
+                    strokeDashoffset={`${2 * Math.PI * 50}`}
+                    animate={{
+                      strokeDashoffset:
+                        2 * Math.PI * 50 * (1 - skill.level / 100),
                     }}
-                    transition={{ duration: 1.2, ease: "easeOut" }}
+                    transition={{ duration: 1.5, ease: "easeOut" }}
+                    className="drop-shadow-[0_0_10px_#06b6d4]"
                   />
                   <defs>
                     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
@@ -78,17 +88,19 @@ export default function Skills() {
                   </defs>
                 </svg>
 
-                {/* Percentage in center */}
-                <span className="absolute inset-0 flex items-center justify-center font-bold text-lg text-cyan-300 group-hover:scale-110 transition">
-                  {skill.level}%
-                </span>
+                {/* Skill Icon */}
+                <skill.icon className="w-8 h-8 text-cyan-400 absolute group-hover:scale-125 transition-transform duration-300" />
               </div>
 
-              {/* Icon + Name */}
-              <div className="flex flex-col items-center">
-                <skill.icon className="w-7 h-7 text-cyan-400 mb-2 group-hover:text-cyan-300 transition" />
-                <span className="text-base font-semibold">{skill.name}</span>
-              </div>
+              {/* Skill Name */}
+              <span className="mt-4 text-lg font-semibold text-white text-center">
+                {skill.name}
+              </span>
+
+              {/* Tooltip */}
+              <span className="absolute opacity-0 group-hover:opacity-100 bottom-[-60px] w-52 text-center bg-gray-800 text-sm text-gray-300 px-3 py-2 rounded-lg border border-cyan-500/50 shadow-lg transition-opacity duration-300">
+                {skill.desc}
+              </span>
             </motion.div>
           ))}
         </div>

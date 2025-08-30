@@ -2,72 +2,84 @@
 
 import { motion } from "framer-motion";
 import Lottie from "lottie-react";
-import studentAnimation from "../../public/animations/student.json"; // ✅ Correct import path
+import { CheckCircle } from "lucide-react"; // ✅ For certification icons
+import studentAnimation from "../../public/animations/student.json"; // ✅ Your animation
 
 export default function Education() {
   return (
     <section id="education" className="py-20 bg-gray-950 text-white">
       <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         
-        {/* Left: Education Details */}
+        {/* LEFT SIDE - Lottie Animation */}
         <motion.div
-          initial={{ x: -50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          className="space-y-8"
-        >
-          <h2 className="text-4xl font-bold text-neon-green mb-6">
-            Education 🎓
-          </h2>
-
-          {/* B.Tech */}
-          <div className="bg-gray-900/60 p-6 rounded-2xl shadow-lg hover:shadow-neon-green/40 transition">
-            <h3 className="text-2xl font-semibold text-neon-green">
-              B.Tech in Civil Engineering
-            </h3>
-            <p className="text-gray-300">
-              National Institute of Technology Karnataka, Surathkal | 2022 – 2026
-            </p>
-            <ul className="list-disc list-inside mt-3 text-gray-400">
-              <li>Specialized in Machine Learning, Data Science, and GIS</li>
-              <li>Research: Rainfall-driven Landslide Prediction (Western Ghats)</li>
-            </ul>
-          </div>
-
-          {/* Pre-University */}
-          <div className="bg-gray-900/60 p-6 rounded-2xl shadow-lg hover:shadow-neon-green/40 transition">
-            <h3 className="text-xl font-semibold text-neon-green">
-              Pre-University
-            </h3>
-            <p className="text-gray-300">
-              Rashtrotthana Vidya Kendra, Bengaluru | 2020 – 2022
-            </p>
-          </div>
-
-          {/* Schooling */}
-          <div className="bg-gray-900/60 p-6 rounded-2xl shadow-lg hover:shadow-neon-green/40 transition">
-            <h3 className="text-xl font-semibold text-neon-green">
-              Schooling
-            </h3>
-            <p className="text-gray-300">
-              S S S High School, Hubli | 2017 – 2020
-            </p>
-          </div>
-        </motion.div>
-
-        {/* Right: Animation */}
-        <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          initial={{ opacity: 0, x: -50 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
           className="flex justify-center"
         >
           <Lottie
-            animationData={studentAnimation}  // ✅ JSON animation
-            loop
-            autoplay
-            style={{ height: "400px", width: "400px" }}
+            animationData={studentAnimation}
+            loop={true}
+            className="w-72 lg:w-96 drop-shadow-lg"
           />
+        </motion.div>
+
+        {/* RIGHT SIDE - Education Content */}
+        <motion.div
+          initial={{ opacity: 0, x: 50 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.8 }}
+        >
+          <h2 className="text-4xl font-bold text-cyan-400 mb-8">
+            Education 🎓
+          </h2>
+
+          {/* Education Cards */}
+          <div className="space-y-8">
+            <div className="bg-gray-900/40 border border-gray-800 rounded-2xl p-6 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/30 transition duration-300">
+              <h3 className="text-2xl font-semibold">B.Tech in Civil Engineering</h3>
+              <p className="text-gray-300 mt-2">NITK Surathkal (2022 - 2026)</p>
+              <p className="text-gray-400 mt-3">
+                Coursework: Machine Learning, Deep Learning, MLOps, and Civil Engineering fundamentals.
+              </p>
+            </div>
+
+            <div className="bg-gray-900/40 border border-gray-800 rounded-2xl p-6 shadow-lg shadow-cyan-500/10 hover:shadow-cyan-500/30 transition duration-300">
+              <h3 className="text-2xl font-semibold">Higher Secondary (Class XII)</h3>
+              <p className="text-gray-300 mt-2">Science Stream (PCM), Graduated with Distinction</p>
+              <p className="text-gray-400 mt-3">
+                Focused on Mathematics, Physics, and Computer Science.
+              </p>
+            </div>
+          </div>
+
+          {/* Certifications Section */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="mt-12"
+          >
+            <h3 className="text-3xl font-bold text-cyan-400 mb-6">
+              Certifications 🏆
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {[
+                "Data Science and Machine Learning Certification",
+                "Python and SQL Fundamentals Certification",
+                "Deep Learning Certification",
+                "MLOps Certification",
+              ].map((cert, index) => (
+                <div
+                  key={index}
+                  className="flex items-center gap-4 bg-gray-900/40 border border-gray-800 rounded-xl p-4 shadow-md shadow-cyan-500/10 hover:shadow-cyan-500/30 transition duration-300"
+                >
+                  <CheckCircle className="text-cyan-400 w-6 h-6" />
+                  <p className="text-gray-300">{cert}</p>
+                </div>
+              ))}
+            </div>
+          </motion.div>
         </motion.div>
       </div>
     </section>

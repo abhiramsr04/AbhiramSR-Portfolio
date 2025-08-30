@@ -2,6 +2,9 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { FaPython, FaDocker, FaDatabase, FaGithub } from "react-icons/fa";
+import { SiTensorflow, SiMongodb } from "react-icons/si";
+import Link from "next/link";
 
 export default function About() {
   return (
@@ -54,11 +57,10 @@ export default function About() {
             transition={{ delay: 0.3, duration: 0.8 }}
             className="text-lg leading-relaxed"
           >
-            Hi, I’m <span className="text-white font-semibold">Abhiram S R </span> 🚀  
+            Hi, I’m <span className="text-white font-semibold">Abhiram S R</span> 🚀  
             A passionate{" "}
-            <span className="text-cyan-400">Machine Learning & Data Science Enthusiast </span>  
-            with a strong foundation in Machine Learning and hands-on projects
-            in <span className="text-white">ML, MLOps and LLMOps</span>.
+            <span className="text-cyan-400">Machine Learning & Data Science Engineer </span>  
+            with a strong foundation in ML, MLOps, and LLMOps.  
           </motion.p>
 
           <motion.p
@@ -67,15 +69,35 @@ export default function About() {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="text-lg leading-relaxed"
           >
-            I enjoy building end-to-end solutions, exploring modern tools like{" "}
-            <span className="text-white">MongoDB, Docker, MLflow</span>, and
-            working on impactful projects that bridge{" "}
-            <span className="text-cyan-400">Machine Learning engineering and data science</span>.
+            I specialize in building end-to-end AI solutions, leveraging modern tools like{" "}
+            <span className="text-white">Docker, MongoDB, MLflow</span> and deploying scalable ML pipelines.
+            My focus is on bridging engineering and data science to create impactful, real-world solutions.
           </motion.p>
+
+          {/* Skills Icons */}
+          <div className="flex flex-wrap gap-5 text-3xl text-cyan-400">
+            <FaPython title="Python" />
+            <SiTensorflow title="TensorFlow" />
+            <FaDocker title="Docker" />
+            <SiMongodb title="MongoDB" />
+            <FaDatabase title="SQL & Databases" />
+            <FaGithub title="GitHub" />
+          </div>
+
+          {/* Resume Button */}
+          <div className="pt-4">
+            <Link
+              href="/resume.pdf" // 👉 Place your resume in /public
+              target="_blank"
+              className="px-6 py-3 rounded-2xl bg-gradient-to-r from-cyan-500 to-blue-600 text-white font-semibold shadow-lg hover:scale-105 transition-transform duration-300"
+            >
+              📄 Download Resume
+            </Link>
+          </div>
         </motion.div>
       </div>
 
-      {/* Decorative gradient blur in background */}
+      {/* Decorative gradient blur */}
       <div className="absolute -top-32 -left-32 w-96 h-96 bg-gradient-to-r from-cyan-500 to-purple-600 rounded-full blur-[120px] opacity-30 animate-pulse"></div>
       <div className="absolute bottom-0 right-0 w-72 h-72 bg-gradient-to-r from-blue-600 to-cyan-500 rounded-full blur-[100px] opacity-20"></div>
     </section>
