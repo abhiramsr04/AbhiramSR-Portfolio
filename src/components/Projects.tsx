@@ -57,9 +57,7 @@ export default function Projects() {
           variants={{
             hidden: {},
             show: {
-              transition: {
-                staggerChildren: 0.2,
-              },
+              transition: { staggerChildren: 0.2 },
             },
           }}
           className="grid md:grid-cols-2 lg:grid-cols-3 gap-10"
@@ -81,68 +79,68 @@ export default function Projects() {
                 scale={1.05}
                 transitionSpeed={400}
               >
-                <motion.a
-                  href={project.demo !== "#" ? project.demo : project.github}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block group"
+                <Card
+                  className="relative bg-gray-800/60 border border-gray-700/50 backdrop-blur-xl rounded-2xl shadow-lg overflow-hidden 
+                  transition-all duration-300 hover:shadow-cyan-500/40 hover:border-cyan-400/30"
                 >
-                  <Card className="relative bg-gray-800/60 border border-gray-700/50 backdrop-blur-xl rounded-2xl shadow-lg overflow-hidden 
-                    transition-all duration-300 hover:shadow-cyan-500/40 hover:border-cyan-400/30">
-                    <CardContent className="p-6 space-y-4">
-                      {/* Title */}
+                  <CardContent className="p-6 space-y-4">
+                    {/* Title */}
+                    <a
+                      href={project.demo !== "#" ? project.demo : project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="group block"
+                    >
                       <h3 className="text-2xl font-semibold text-white group-hover:text-cyan-300 transition-colors">
                         {project.title}
                       </h3>
+                    </a>
 
-                      {/* Description */}
-                      <p className="text-gray-400 leading-relaxed">
-                        {project.description}
-                      </p>
+                    {/* Description */}
+                    <p className="text-gray-400 leading-relaxed">
+                      {project.description}
+                    </p>
 
-                      {/* Tech Stack */}
-                      <div className="flex flex-wrap gap-2">
-                        {project.tech.map((tech, idx) => (
-                          <motion.span
-                            key={idx}
-                            whileHover={{ scale: 1.1 }}
-                            className="px-3 py-1 text-sm bg-gradient-to-r from-cyan-500/20 to-blue-500/20 
-                              text-cyan-300 border border-cyan-400/30 rounded-full shadow-sm 
-                              transition hover:shadow-cyan-400/40"
-                          >
-                            {tech}
-                          </motion.span>
-                        ))}
-                      </div>
+                    {/* Tech Stack */}
+                    <div className="flex flex-wrap gap-2">
+                      {project.tech.map((tech, idx) => (
+                        <motion.span
+                          key={idx}
+                          whileHover={{ scale: 1.1 }}
+                          className="px-3 py-1 text-sm bg-gradient-to-r from-cyan-500/20 to-blue-500/20 
+                            text-cyan-300 border border-cyan-400/30 rounded-full shadow-sm 
+                            transition hover:shadow-cyan-400/40"
+                        >
+                          {tech}
+                        </motion.span>
+                      ))}
+                    </div>
 
-                      {/* Links */}
-                      <div className="flex gap-6 pt-4">
-                        {project.github !== "#" && (
-                          <motion.a
-                            whileHover={{ scale: 1.1 }}
-                            href={project.github}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-gray-300 hover:text-white transition"
-                          >
-                            <Github className="w-5 h-5" /> Code
-                          </motion.a>
-                        )}
-                        {project.demo !== "#" && (
-                          <motion.a
-                            whileHover={{ scale: 1.1 }}
-                            href={project.demo}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition"
-                          >
-                            <ExternalLink className="w-5 h-5" /> Live
-                          </motion.a>
-                        )}
-                      </div>
-                    </CardContent>
-                  </Card>
-                </motion.a>
+                    {/* Links */}
+                    <div className="flex gap-6 pt-4">
+                      {project.github !== "#" && (
+                        <a
+                          href={project.github}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-gray-300 hover:text-white transition"
+                        >
+                          <Github className="w-5 h-5" /> Code
+                        </a>
+                      )}
+                      {project.demo !== "#" && (
+                        <a
+                          href={project.demo}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 transition"
+                        >
+                          <ExternalLink className="w-5 h-5" /> Live
+                        </a>
+                      )}
+                    </div>
+                  </CardContent>
+                </Card>
               </Tilt>
             </motion.div>
           ))}
